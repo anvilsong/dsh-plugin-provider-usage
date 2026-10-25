@@ -4,6 +4,23 @@ Real provider usage for DeepSeek Harness, in one plugin. Six providers;
 each is an isolated module that mounts its own Remote service, its own
 `/usage-*` command, and its own poll timer.
 
+## Screenshots
+
+### Usage inside provider cards
+
+Configured providers show a compact usage summary in **Settings → Models**.
+Select **details** to expand the full panel without leaving the provider card.
+
+![Kimi Code and OpenRouter usage inside their provider cards](https://raw.githubusercontent.com/anvilsong/dsh-plugin-provider-usage/main/docs/images/models-provider-usage.webp)
+
+### Composer chips
+
+The chip follows the active provider. Select it to open the usage panel.
+
+| OpenRouter active | Kimi Code active |
+|---|---|
+| ![OpenRouter composer chip showing key usage and remaining balance](https://raw.githubusercontent.com/anvilsong/dsh-plugin-provider-usage/main/docs/images/composer-openrouter-chip.webp) | ![Kimi Code composer chip showing quota usage](https://raw.githubusercontent.com/anvilsong/dsh-plugin-provider-usage/main/docs/images/composer-kimi-chip.webp) |
+
 ## Verification status
 
 Honest list, per provider:
