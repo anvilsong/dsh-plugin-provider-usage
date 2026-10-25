@@ -4,6 +4,25 @@ Provider balances and subscription quota inside DeepSeek Harness.
 OpenRouter, Kimi Code, DeepSeek, GLM Coding Plan, MiniMax Coding Plan, and
 NewAPI are supported in one package.
 
+## Install
+
+### Desktop app
+
+Open **Settings → Plugins → Add plugin → Install a third-party plugin**.
+Enter `dsh-plugin-provider-usage`, install it, and enable it.
+
+### Web or CLI
+
+```sh
+dsh plugin --profile web add dsh-plugin-provider-usage@latest
+```
+
+Replace `web` with your profile name when needed. Restart the Host and
+refresh the page after installation.
+
+> Registry installation requires the package to be published on npm. To try
+> the source checkout before publication, use the development command below.
+
 Read the [complete installation, configuration, and security guide](packages/usage/README.md).
 
 ## Preview

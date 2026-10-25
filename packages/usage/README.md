@@ -34,6 +34,10 @@ The chip follows the active provider. Select it to open the usage panel.
 
 An existing DeepSeek Harness installation is required.
 
+> The registry commands below work after this package is published on npm.
+> Before publication, install a source checkout with the command in
+> [Development](#development).
+
 ### Desktop app
 
 1. Open **Settings → Plugins → Add plugin**.
