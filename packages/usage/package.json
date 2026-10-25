@@ -1,0 +1,65 @@
+{
+  "name": "dsh-plugin-provider-usage",
+  "description": "Provider usage for DSH — OpenRouter credits, Kimi Code quota, DeepSeek balance, GLM and MiniMax coding-plan windows, NewAPI quota; composer chips gated on the active provider; /usage-* report commands",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "src/index.host.js",
+  "meta": {
+    "title": "Provider usage",
+    "description": "OpenRouter, Kimi Code, DeepSeek, GLM, MiniMax and NewAPI usage on Settings → Models, in composer chips, and through /usage-* commands"
+  },
+  "exports": {
+    ".": {
+      "default": "./src/index.host.js"
+    },
+    "./client": {
+      "default": "./src/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-api-gateway"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "files": [
+    "src/index.host.js",
+    "src/providers",
+    "src/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "anvilsong",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anvilsong/dsh-plugin-provider-usage.git"
+  },
+  "homepage": "https://github.com/anvilsong/dsh-plugin-provider-usage#readme",
+  "bugs": "https://github.com/anvilsong/dsh-plugin-provider-usage/issues",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "usage",
+    "quota",
+    "openrouter",
+    "kimi",
+    "glm",
+    "minimax",
+    "deepseek",
+    "newapi"
+  ]
+}

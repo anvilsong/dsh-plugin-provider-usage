@@ -1,0 +1,46 @@
+# Bundle patch for dsh-plugin-provider-usage.
+# One row, in an `insert` list: a bare id row is an OVERRIDE of an existing
+# entry and inserts nothing. The Client half loads through the package's
+# dsh.client entry; no client row belongs here.
+- insert:
+    - id: usage
+      name: dsh-plugin-provider-usage
+      config:
+        providers:
+          openrouter:
+            enabled: true
+            # Ordinary key: per-key usage/limits. A management key switches
+            # the panel to the account-wide credits view.
+            credentialRef: OPENROUTER_API_KEY
+            showComposerChip: true
+          kimi:
+            enabled: true
+            # The Kimi Code Console API key (kimi.com/code/console). A Kimi
+            # Platform key (platform.kimi.ai) is a different product, 401.
+            credentialRef: KIMI_CODING_API_KEY
+            # cn → https://api.kimi.com/coding/v1 ; global → https://api.kimi.ai/coding/v1
+            region: cn
+            refreshMs: 120000
+            timeoutMs: 15000
+            showComposerChip: true
+          deepseek:
+            enabled: true
+            credentialRef: DEEPSEEK_API_KEY
+            showComposerChip: true
+          zhipu:
+            enabled: true
+            # GLM Coding Plan key. cn → open.bigmodel.cn ; global → api.z.ai
+            credentialRef: ZHIPU_API_KEY
+            region: cn
+            showComposerChip: true
+          minimax:
+            enabled: true
+            # cn → api.minimaxi.com ; global → api.minimax.io
+            credentialRef: MINIMAX_API_KEY
+            region: cn
+            showComposerChip: true
+          newapi:
+            # Config-only provider: no default site. Set baseUrl to enable.
+            enabled: false
+            # baseUrl: https://your-newapi-host
+            # credentialRef: NEWAPI_API_KEY
