@@ -40,7 +40,7 @@
             region: cn
             showComposerChip: true
           newapi:
-            # Config-only provider: no default site. Set baseUrl to enable.
+            # Config-only provider: no default site. Enable it and set baseUrl.
             enabled: false
             # baseUrl: https://your-newapi-host
             # credentialRef: NEWAPI_API_KEY
